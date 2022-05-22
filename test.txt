@@ -1,0 +1,9 @@
+addi R11,R0,15
+addi R12,R0,3
+loop:
+beq R0,R12,out
+addi R3,R3,1
+addi R12,R12,-1
+beq R0,R0,loop
+out:
+add R4,R11,R3

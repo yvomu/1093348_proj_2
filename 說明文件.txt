@@ -1,0 +1,14 @@
+將預測器寫成一個class，內含變數history(儲存history)、bc(紀錄8個bc狀態)、guess(預測值)、misprediction(預測錯誤次數)
+，函式dopred(找出預測值並且判斷是否miss)、whichBC(得出應該要看第幾個bc)、renewHistory(更新history)、renewBC(依造預測照結果更新BC)與各種輸出變數
+
+把指令拆解放入有成員變數opperator、reg、branch、immediate的struct
+還有紀錄label在哪一個指令之上的struct
+
+把測資的指令都放入vector裡
+接下來看輸入幾個entry就用有幾個預測器class的vector
+
+以變數now紀錄當前執行的指令，next為下一個執行的指令，
+如果是add、addi就執行加法，next為now+1，
+如果是beq，判斷後面兩個變數有無相同，有的話用label陣列查出label的位置，next為那個位置;
+now%entry的數量為當前應該要用哪一個entry，用那個entry進行預測，並且更新狀態與判斷預測有無錯誤，直到整篇指令執行完
+

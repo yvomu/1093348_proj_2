@@ -1,0 +1,62 @@
+輸入:
+addi R11,R0,15
+addi R12,R0,3
+loop:
+beq R0,R12,out
+addi R3,R3,1
+addi R12,R12,-1
+beq R0,R0,loop
+out:
+add R4,R11,R3
+
+輸出:
+Please input entry(entry>0):
+4
+ history              state               pred act missprediction
+entries: 0                      addi R11,R0,15
+   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+
+entries: 1                      addi R12,R0,3
+   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+
+entries: 2                      beq R0,R12,out
+   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+
+entries: 3                      addi R3,R3,1
+   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+
+entries: 0                      addi R12,R12,-1
+   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+
+entries: 1                      beq R0,R0,loop
+   000    SN  SN  SN  SN  SN  SN  SN  SN    N   T  missprediction: 1
+
+entries: 2                      beq R0,R12,out
+   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+
+entries: 3                      addi R3,R3,1
+   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+
+entries: 0                      addi R12,R12,-1
+   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+
+entries: 1                      beq R0,R0,loop
+   001    WN  SN  SN  SN  SN  SN  SN  SN    N   T  missprediction: 2
+
+entries: 2                      beq R0,R12,out
+   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+
+entries: 3                      addi R3,R3,1
+   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+
+entries: 0                      addi R12,R12,-1
+   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+
+entries: 1                      beq R0,R0,loop
+   011    WN  WN  SN  SN  SN  SN  SN  SN    N   T  missprediction: 3
+
+entries: 2                      beq R0,R12,out
+   000    SN  SN  SN  SN  SN  SN  SN  SN    N   T  missprediction: 1
+
+entries: 2                      add R4,R11,R3
+   001    WN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 1
