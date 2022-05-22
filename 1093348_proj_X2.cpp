@@ -57,16 +57,16 @@ public:
 		}
 	}
 	void getHistory() {
-		cout << "   " << history[2] << history[1] << history[0] << "  ";
+		cout << history[2] << history[1] << history[0];
 	}
 
 	void getBC() {
 		for (int i = 0; i < state.size(); i++)
-			cout << "  " << stateType[state[i]];
+			cout <<"  " << stateType[state[i]];
 	}
 
 	void getPred() {
-		cout << "    " << stateType[state[bc]][1];
+		cout << stateType[state[bc]][1];
 	}
 
 	void dopred(bool act) {
@@ -77,7 +77,7 @@ public:
 	}
 
 	void getmisspred() {
-		cout << "  missprediction: " << missprediction << endl;
+		cout << "missprediction: " << missprediction << endl;
 	}
 private:
 	vector<int>  state = { 0,0,0,0,0,0,0,0 };
@@ -179,10 +179,10 @@ int main() {
 	bool act;
 	cout << "Please input entry(entry>0):\n";
 	cin >> entries;
-	cout << " history              state               pred act missprediction\n";
+	//cout << " history              state               pred act missprediction\n";
 	vector<Predictor> predictors(entries);
 	while (now < inst.size()) {
-		
+		cout << "====================================================================\n";
 		cout << "entries: " << now % entries<< "			" << strinst[now] << endl;
 		
 		
@@ -218,14 +218,26 @@ int main() {
 		}
 		
 		predictors[now % entries].dopred(act);
-		predictors[now % entries].getHistory();
-		predictors[now % entries].getBC();
+
+		cout << "prediction:";
 		predictors[now % entries].getPred();
+		cout << endl;
 		if (act == 1)
-			cout << "   T";
+			cout << "actural: T\n";
 		else
-			cout << "   N";
+			cout << "actural: N\n";
+		cout << "missprediction: ";
 		predictors[now % entries].getmisspred();
+		cout << endl;
+		for (int i = 0; i < predictors.size(); i++) {
+			cout << i << ".  ";
+			predictors[i].getHistory();
+			predictors[i].getBC();
+			cout << endl;
+		}
+		
+		
+		
 		cout << endl;
 		predictors[now % entries].renewBC(act);
 		predictors[now % entries].renewHistory(act);

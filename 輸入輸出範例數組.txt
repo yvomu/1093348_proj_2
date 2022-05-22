@@ -8,55 +8,332 @@ addi R12,R12,-1
 beq R0,R0,loop
 out:
 add R4,R11,R3
+*******************************************************************
+entry = 4:
 
 輸出:
 Please input entry(entry>0):
 4
- history              state               pred act missprediction
+====================================================================
 entries: 0                      addi R11,R0,15
-   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+prediction:N
+actural: N
+missprediction: missprediction: 0
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  000  SN  SN  SN  SN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 1                      addi R12,R0,3
-   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+prediction:N
+actural: N
+missprediction: missprediction: 0
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  000  SN  SN  SN  SN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 2                      beq R0,R12,out
-   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+prediction:N
+actural: N
+missprediction: missprediction: 0
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  000  SN  SN  SN  SN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 3                      addi R3,R3,1
-   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+prediction:N
+actural: N
+missprediction: missprediction: 0
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  000  SN  SN  SN  SN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 0                      addi R12,R12,-1
-   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+prediction:N
+actural: N
+missprediction: missprediction: 0
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  000  SN  SN  SN  SN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 1                      beq R0,R0,loop
-   000    SN  SN  SN  SN  SN  SN  SN  SN    N   T  missprediction: 1
+prediction:N
+actural: T
+missprediction: missprediction: 1
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  000  SN  SN  SN  SN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 2                      beq R0,R12,out
-   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+prediction:N
+actural: N
+missprediction: missprediction: 0
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  001  WN  SN  SN  SN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 3                      addi R3,R3,1
-   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+prediction:N
+actural: N
+missprediction: missprediction: 0
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  001  WN  SN  SN  SN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 0                      addi R12,R12,-1
-   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+prediction:N
+actural: N
+missprediction: missprediction: 0
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  001  WN  SN  SN  SN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 1                      beq R0,R0,loop
-   001    WN  SN  SN  SN  SN  SN  SN  SN    N   T  missprediction: 2
+prediction:N
+actural: T
+missprediction: missprediction: 2
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  001  WN  SN  SN  SN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 2                      beq R0,R12,out
-   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+prediction:N
+actural: N
+missprediction: missprediction: 0
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  011  WN  WN  SN  SN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 3                      addi R3,R3,1
-   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+prediction:N
+actural: N
+missprediction: missprediction: 0
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  011  WN  WN  SN  SN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 0                      addi R12,R12,-1
-   000    SN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 0
+prediction:N
+actural: N
+missprediction: missprediction: 0
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  011  WN  WN  SN  SN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 1                      beq R0,R0,loop
-   011    WN  WN  SN  SN  SN  SN  SN  SN    N   T  missprediction: 3
+prediction:N
+actural: T
+missprediction: missprediction: 3
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  011  WN  WN  SN  SN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 2                      beq R0,R12,out
-   000    SN  SN  SN  SN  SN  SN  SN  SN    N   T  missprediction: 1
+prediction:N
+actural: T
+missprediction: missprediction: 1
 
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  111  WN  WN  SN  WN  SN  SN  SN  SN
+2.  000  SN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
 entries: 2                      add R4,R11,R3
-   001    WN  SN  SN  SN  SN  SN  SN  SN    N   N  missprediction: 1
+prediction:N
+actural: N
+missprediction: missprediction: 1
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  111  WN  WN  SN  WN  SN  SN  SN  SN
+2.  001  WN  SN  SN  SN  SN  SN  SN  SN
+3.  000  SN  SN  SN  SN  SN  SN  SN  SN
+*****************************************************************
+entry = 2:
+
+Please input entry(entry>0):
+2
+====================================================================
+entries: 0                      addi R11,R0,15
+prediction:N
+actural: N
+missprediction: missprediction: 0
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 1                      addi R12,R0,3
+prediction:N
+actural: N
+missprediction: missprediction: 0
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 0                      beq R0,R12,out
+prediction:N
+actural: N
+missprediction: missprediction: 0
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 1                      addi R3,R3,1
+prediction:N
+actural: N
+missprediction: missprediction: 0
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 0                      addi R12,R12,-1
+prediction:N
+actural: N
+missprediction: missprediction: 0
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 1                      beq R0,R0,loop
+prediction:N
+actural: T
+missprediction: missprediction: 1
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  000  SN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 0                      beq R0,R12,out
+prediction:N
+actural: N
+missprediction: missprediction: 0
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  001  WN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 1                      addi R3,R3,1
+prediction:N
+actural: N
+missprediction: missprediction: 1
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  001  WN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 0                      addi R12,R12,-1
+prediction:N
+actural: N
+missprediction: missprediction: 0
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  010  WN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 1                      beq R0,R0,loop
+prediction:N
+actural: T
+missprediction: missprediction: 2
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  010  WN  SN  SN  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 0                      beq R0,R12,out
+prediction:N
+actural: N
+missprediction: missprediction: 0
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  101  WN  SN  WN  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 1                      addi R3,R3,1
+prediction:N
+actural: N
+missprediction: missprediction: 2
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  101  WN  SN  WN  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 0                      addi R12,R12,-1
+prediction:N
+actural: N
+missprediction: missprediction: 0
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  010  WN  SN  WN  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 1                      beq R0,R0,loop
+prediction:N
+actural: T
+missprediction: missprediction: 3
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  010  WN  SN  WN  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 0                      beq R0,R12,out
+prediction:N
+actural: T
+missprediction: missprediction: 1
+
+0.  000  SN  SN  SN  SN  SN  SN  SN  SN
+1.  101  WN  SN  WT  SN  SN  SN  SN  SN
+
+====================================================================
+entries: 0                      add R4,R11,R3
+prediction:N
+actural: N
+missprediction: missprediction: 1
+
+0.  001  WN  SN  SN  SN  SN  SN  SN  SN
+1.  101  WN  SN  WT  SN  SN  SN  SN  SN
