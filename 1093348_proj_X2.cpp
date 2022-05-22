@@ -77,7 +77,7 @@ public:
 	}
 
 	void getmisspred() {
-		cout << "missprediction: " << missprediction << endl;
+		cout << missprediction << endl;
 	}
 private:
 	vector<int>  state = { 0,0,0,0,0,0,0,0 };
